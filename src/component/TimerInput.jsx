@@ -30,19 +30,19 @@ export default function TimerInput(props) {
   
   return (
     <div className="Time-input">
-        <div>
+        <div className="wrap-select">
             <label htmlFor="hourslist">Hours</label>
             <select  disabled={props.time > 0 && true} name="hourslist"  onChange={props.handleselect}>
                 {hourslist()}
             </select>
         </div>
-        <div>
+        <div className="wrap-select">
             <label htmlFor="minutelist">Minute</label>
             <select disabled={props.time > 0 && true} name="minutelist" onChange={props.handleselect}>
                 {minutelist()}
             </select>
         </div>
-        <div>
+        <div className="wrap-select">
             <label htmlFor="secondlist">Second</label>
             <select disabled={props.time > 0 && true} name="secondlist"  onChange={props.handleselect}>
                 {secondslist()}

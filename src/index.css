@@ -9,6 +9,11 @@ body {
   box-sizing: border-box;
 }
 
+/* @media screen and (max-width: 768px) {
+  .Time-input input , .Time-input select{
+    width:7rem;
+  }
+} */
 .App{
   background: var(--background);
   height: 100vh;
@@ -35,18 +40,22 @@ body {
   height: 25%;
 }
 
-
-.Time-input  div{
+.wrap-select {
+  width: 35%;
+  padding: 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;  
   justify-content: space-evenly;
 }
+
+
 .Time-input input , .Time-input select{
   text-align: center;
   color: #fff;
   height: 1.5rem;
-  width: 11.5rem;
+  /* width: 11.5rem; */
+  width:100%;
   border-radius: 1rem;
   background:var(--background);
   border: 0px solid #000;
