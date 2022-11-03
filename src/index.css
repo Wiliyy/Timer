@@ -1,13 +1,157 @@
+
+
+:root{
+  --background: #1f303c;
+  --circle-stroke:#61FF00;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App{
+  background: var(--background);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+}
+
+
+.Time-input{
+  width: 50%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Time-result{
+  display: grid;
+  place-items: center;  
+  width: 100%;
+  height: 25%;
+}
+
+
+.Time-input  div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: space-evenly;
+}
+.Time-input input , .Time-input select{
+  text-align: center;
+  color: #fff;
+  height: 1.5rem;
+  width: 11.5rem;
+  border-radius: 1rem;
+  background:var(--background);
+  border: 0px solid #000;
+  box-shadow: 0px 0px 10px 0px rgb(0,0,0,.5);
+}
+.Time-input label{
+  padding: 10px;
+}
+
+.circle{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.result{
+  position: absolute;
+  text-align:center;
+  color: #fff;
+}
+svg{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(270deg);
+}
+svg circle{
+  width: 100%;
+  height: 100%;
+  fill:none;
+  stroke:rgb(255,255,255,.10);
+  stroke-width:4px;
+}
+svg circle:nth-child(2){
+  stroke-dasharray:372 ;
+  stroke:var(--circle-stroke);
+}  
+.dot{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+}
+.dot::before{
+  content:'';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background:var(--circle-stroke);
+  top: 10px;
+  border-radius: 50%;
+}
+
+
+.Time-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: end;
+  width: 95%;
+  height: 25%;
+}
+
+
+.Timer-button{
+  color: #e0ffcd;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  height: 90px;
+  align-items: center;
+  cursor: pointer;
+  font-size:.8rem;
+}
+
+.Timer-button-reset{
+  color: #ffb4b4;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  height: 90px;
+  align-items: center;
+  cursor: pointer;
+  font-size:.8rem;
+}
+.disable_button{
+  color: #ffb4b44b;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  height: 90px;
+  align-items: center;
+  font-size:.8rem;
+}
+
+.iconify ,Icon{
+  width: 25%;
 }
